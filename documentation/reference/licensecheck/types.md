@@ -87,5 +87,3 @@ def printLicense(licenseEnum: L) -> str:
 #### See also
 
 - [L](#l)
-
-

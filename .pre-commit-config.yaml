@@ -1,20 +1,15 @@
 repos:
-  - repo: https://github.com/FHPythonUtils/Blackt
-    rev: '2022.0.3'
+  - repo: https://github.com/psf/black
+    rev: 23.7.0
     hooks:
-      - id: blackt
+      - id: black
+        types: [python]
 
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
       - id: isort
-
-  - repo: https://github.com/pycqa/pylint
-    rev: v3.0.0a6
-    hooks:
-      - id: pylint
-        exclude: "tests/"
-        args: [--disable=import-error,--jobs=0]
+        types: [python]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -29,6 +24,8 @@ repos:
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
+        types: [python]
+
   - repo: https://github.com/boidolr/pre-commit-images
     rev: v1.2.1
     hooks:
